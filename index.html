@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Donna Glass</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,44 +12,122 @@
 
 <header>
 
+<div class="logo">
 <img src="IMG_20260506_122759_700.jpg" alt="Donna Glass Logo">
+</div>
 
 <h1>DONNA GLASS</h1>
-<p>LA PERFECTION</p>
 
-<button class="lang-btn">Français</button>
-<button class="lang-btn">العربية</button>
+<p id="slogan">
+LA PERFECTION
+</p>
+
+<div class="language">
+
+<button onclick="setFrench()">Français</button>
+
+<button onclick="setArabic()">العربية</button>
+
+</div>
 
 </header>
 
 <nav>
-<a href="#">Accueil</a>
-<a href="#">À propos</a>
-<a href="#">Produits</a>
-<a href="#">Services</a>
-<a href="#">Contact</a>
+
+<a href="#home" id="menu1">Accueil</a>
+
+<a href="#about" id="menu2">À propos</a>
+
+<a href="#products" id="menu3">Produits</a>
+
+<a href="#services" id="menu4">Services</a>
+
+<a href="#contact" id="menu5">Contact</a>
+
 </nav>
 
-<section class="hero">
+<section class="hero" id="home">
 
-<h2>Bienvenue chez Donna Glass</h2>
+<h2 id="title">
+Bienvenue chez Donna Glass
+</h2>
 
-<p>
-Leader dans les solutions de verre pour le bâtiment,
-l'automobile, l'électroménager et l'énergie solaire.
+<p id="description">
+
+Leader dans la fabrication et la transformation du verre
+pour le bâtiment, l'automobile, les appareils électroménagers
+et l'énergie solaire.
+
 </p>
 
-<a href="#" class="btn">Découvrir</a>
+<a href="#products" class="btn">
+
+Découvrir nos produits
+
+</a>
 
 </section>
 
-<footer>
+<section id="about">
 
-© 2026 Donna Glass - Tous droits réservés
+<h2>À propos</h2>
 
-</footer>
+<p>
 
-<script src="script.js"></script>
+Donna Glass est spécialisée dans les solutions verrières
+modernes avec des produits de haute qualité destinés
+aux secteurs industriels et architecturaux.
 
-</body>
-</html>
+</p>
+
+</section>
+
+<section id="products">
+
+<h2>Nos Produits</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🏢 Verre Bâtiment</h3>
+
+<p>
+Verre architectural de haute qualité.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🚗 Verre Automobile</h3>
+
+<p>
+Verre feuilleté et trempé.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🏠 Électroménager</h3>
+
+<p>
+Verre pour fours et réfrigérateurs.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>☀️ Verre Solaire</h3>
+
+<p>
+Solutions pour panneaux photovoltaïques.
+</p>
+
+</div>
+
+</div>
+
+</section>
