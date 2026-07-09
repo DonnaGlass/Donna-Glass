@@ -1,88 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Donna Glass</title>
+
 <link rel="stylesheet" href="style.css">
+
+<style>
+.lang-btn{
+padding:10px 20px;
+margin:5px;
+border:none;
+background:#0b3d91;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
+
 <img src="IMG_20260506_122759_700.jpg" alt="Donna Glass Logo">
 
 <h1>DONNA GLASS</h1>
-<p>LA PERFECTION</p>
+<p id="slogan">LA PERFECTION</p>
+
+<button class="lang-btn" onclick="fr()">Français</button>
+<button class="lang-btn" onclick="ar()">العربية</button>
+
 </header>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Products</a>
-<a href="#">Services</a>
-<a href="#">Contact</a>
+
+<a id="m1">Accueil</a>
+<a id="m2">À propos</a>
+<a id="m3">Produits</a>
+<a id="m4">Services</a>
+<a id="m5">Contact</a>
+
 </nav>
 
 <section>
-<h2>Welcome to Donna Glass</h2>
 
-<p>
-Professional Glass Solutions for Construction,
-Automotive, Home Appliances and Solar Energy.
+<h2 id="titre">Bienvenue chez Donna Glass</h2>
+
+<p id="texte">
+Solutions professionnelles pour tous les types de verre.
 </p>
-
-<br>
-
-<button>Discover More</button>
-
-</section>
-
-<section>
-<h2>About Us</h2>
-
-<p>
-Donna Glass specializes in manufacturing and supplying
-high-quality glass products with innovative solutions
-for construction, automotive, household appliances and solar energy.
-</p>
-
-</section>
-
-<section>
-<h2>Our Products</h2>
-
-<p>🏢 Building Glass</p>
-<p>🚗 Automotive Glass</p>
-<p>🏠 Home Appliance Glass</p>
-<p>☀️ Solar Glass</p>
-
-</section>
-
-<section>
-<h2>Our Services</h2>
-
-<p>✔ Glass Manufacturing</p>
-<p>✔ Glass Processing</p>
-<p>✔ Custom Glass Solutions</p>
-<p>✔ Technical Support</p>
-
-</section>
-
-<section>
-<h2>Contact Us</h2>
-
-<p>📧 info@donnaglass.com</p>
-<p>📞 +213 XX XX XX XX</p>
-<p>📍 Algeria</p>
 
 </section>
 
 <footer>
-<p>© 2026 Donna Glass. All Rights Reserved.</p>
+© 2026 Donna Glass
 </footer>
 
-<script src="script.js"></script>
+<script>
+
+function fr(){
+
+document.getElementById("slogan").innerHTML="LA PERFECTION";
+document.getElementById("m1").innerHTML="Accueil";
+document.getElementById("m2").innerHTML="À propos";
+document.getElementById("m3").innerHTML="Produits";
+document.getElementById("m4").innerHTML="Services";
+document.getElementById("m5").innerHTML="Contact";
+
+document.getElementById("titre").innerHTML="Bienvenue chez Donna Glass";
+
+document.getElementById("texte").innerHTML=
+"Solutions professionnelles pour tous les types de verre.";
+
+document.body.dir="ltr";
+
+}
+
+function ar(){
+
+document.getElementById("slogan").innerHTML="التميز في صناعة الزجاج";
+document.getElementById("m1").innerHTML="الرئيسية";
+document.getElementById("m2").innerHTML="من نحن";
+document.getElementById("m3").innerHTML="المنتجات";
+document.getElementById("m4").innerHTML="الخدمات";
+document.getElementById("m5").innerHTML="اتصل بنا";
+
+document.getElementById("titre").innerHTML="مرحبًا بكم في Donna Glass";
+
+document.getElementById("texte").innerHTML=
+"نقدم حلولًا احترافية في مجال الزجاج للبناء والسيارات والأجهزة المنزلية.";
+
+document.body.dir="rtl";
+
+}
+
+</script>
 
 </body>
 </html>
