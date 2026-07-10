@@ -178,3 +178,37 @@ gap:12px;
 }
 
 }
+.hero{
+background:linear-gradient(rgba(0,59,142,.75),rgba(0,59,142,.75));
+color:white;
+padding:120px 20px;
+text-align:center;
+}
+
+.hero h2{
+font-size:50px;
+color:white;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+max-width:900px;
+margin:auto;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 40px;
+background:white;
+color:#003b8e;
+font-weight:bold;
+border-radius:8px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+background:#e8e8e8;
+}
