@@ -1,39 +1,90 @@
-function setFrench(){
+window.addEventListener("scroll", function () {
 
-document.documentElement.lang="fr";
-document.body.dir="ltr";
+    const cards = document.querySelectorAll(".card");
 
-document.getElementById("menu1").innerHTML="Accueil";
-document.getElementById("menu2").innerHTML="À propos";
-document.getElementById("menu3").innerHTML="Produits";
-document.getElementById("menu4").innerHTML="Services";
-document.getElementById("menu5").innerHTML="Contact";
+    cards.forEach(function(card){
 
-document.getElementById("title").innerHTML="Bienvenue chez Donna Glass";
+        const position = card.getBoundingClientRect().top;
+        const screen = window.innerHeight;
 
-document.getElementById("description").innerHTML=
-"Leader dans la fabrication et la transformation du verre pour le bâtiment, l'automobile, les appareils électroménagers et l'énergie solaire.";
+        if(position < screen - 100){
+            card.classList.add("show");
+        }
 
-document.getElementById("slogan").innerHTML="LA PERFECTION";
+    });
+
+});
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", function(){
+
+    if(window.scrollY > 300){
+        topBtn.style.display = "block";
+    }else{
+        topBtn.style.display = "none";
+    }
+
+});
+
+topBtn.addEventListener("click", function(){
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
+const images = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.getElementById("close");
+
+if(lightbox && lightboxImg && closeBtn){
+
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener("click", (e) => {
+        if(e.target === lightbox){
+            lightbox.style.display = "none";
+        }
+    });
 
 }
+const counters = document.querySelectorAll(".counter");
 
-function setArabic(){
+counters.forEach(counter => {
 
-document.documentElement.lang="ar";
-document.body.dir="rtl";
+    counter.innerText = "0";
 
-document.getElementById("menu1").innerHTML="الرئيسية";
-document.getElementById("menu2").innerHTML="من نحن";
-document.getElementById("menu3").innerHTML="المنتجات";
-document.getElementById("menu4").innerHTML="الخدمات";
-document.getElementById("menu5").innerHTML="اتصل بنا";
+    const updateCounter = () => {
 
-document.getElementById("title").innerHTML="مرحباً بكم في Donna Glass";
+        const target = +counter.getAttribute("data-target");
+        const current = +counter.innerText;
 
-document.getElementById("description").innerHTML=
-"نقدم حلولاً احترافية في صناعة الزجاج للبناء والسيارات والأجهزة الكهرومنزلية والطاقة الشمسية.";
+        const increment = target / 100;
 
-document.getElementById("slogan").innerHTML="التميز في صناعة الزجاج";
+        if(current < target){
 
-}
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCounter,20);
+
+        }else{
+
+            counter.innerText = target + "+";
+
+        }
+
+    };
+
+    updateCounter();
+
+});
