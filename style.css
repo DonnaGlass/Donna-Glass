@@ -488,3 +488,18 @@ form button:hover{
     border-radius:15px;
     margin-bottom:15px;
 }
+.contact-info i{
+    color:#003b8e;
+    font-size:22px;
+    margin-right:10px;
+}
+
+.contact-info a{
+    color:#333;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.contact-info a:hover{
+    color:#003b8e;
+}
