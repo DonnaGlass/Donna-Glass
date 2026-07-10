@@ -481,3 +481,10 @@ form button:hover{
     border-radius:15px;
     margin-bottom:15px;
 }
+.logo img{
+    width:160px;
+    background:white;
+    padding:10px;
+    border-radius:15px;
+    margin-bottom:15px;
+}
