@@ -233,3 +233,15 @@ color:#003b8e;
 font-size:40px;
 margin-bottom:10px;
 }
+#gallery{
+background:white;
+}
+
+#gallery .card{
+min-height:180px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
