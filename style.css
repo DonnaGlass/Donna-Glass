@@ -245,3 +245,12 @@ justify-content:center;
 align-items:center;
 text-align:center;
 }
+#why{
+background:#f8f9fc;
+}
+
+#why h2{
+text-align:center;
+color:#003b8e;
+margin-bottom:40px;
+}
