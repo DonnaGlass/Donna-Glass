@@ -212,3 +212,24 @@ transition:.3s;
 .btn:hover{
 background:#e8e8e8;
 }
+#stats{
+background:#003b8e;
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+#stats h2{
+color:white;
+margin-bottom:40px;
+}
+
+#stats .card{
+background:white;
+color:#003b8e;
+}
+
+#stats .card h3{
+font-size:40px;
+margin-bottom:10px;
+}
