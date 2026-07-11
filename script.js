@@ -103,12 +103,24 @@ counters.forEach(counter => {
     update();
 
 });
-window.addEventListener("load", () => {
+window.addEventListener("load", function () {
 
-    setTimeout(() => {
+    const loader = document.getElementById("loader");
 
-        document.getElementById("loader").classList.add("loader-hide");
+    if(loader){
 
-    }, 2000);
+        setTimeout(function(){
+
+            loader.style.opacity = "0";
+
+            setTimeout(function(){
+
+                loader.style.display = "none";
+
+            },800);
+
+        },1500);
+
+    }
 
 });
