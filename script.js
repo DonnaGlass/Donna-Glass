@@ -167,3 +167,30 @@ window.addEventListener("scroll", ()=>{
     });
 
 });
+
+/* ===== Sections Animation ===== */
+
+const hiddenSections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show-section");
+
+        }
+
+    });
+
+},{
+    threshold:0.2
+});
+
+hiddenSections.forEach(section=>{
+
+    section.classList.add("hidden");
+    observer.observe(section);
+
+});
