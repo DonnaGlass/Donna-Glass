@@ -194,3 +194,25 @@ hiddenSections.forEach(section=>{
     observer.observe(section);
 
 });
+/* ===== Hide / Show Navbar ===== */
+
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+
+    const navbar = document.getElementById("navbar");
+    const currentScroll = window.pageYOffset;
+
+    if(currentScroll > lastScroll && currentScroll > 120){
+
+        navbar.style.transform = "translateY(-100%)";
+
+    }else{
+
+        navbar.style.transform = "translateY(0)";
+
+    }
+
+    lastScroll = currentScroll;
+
+});
