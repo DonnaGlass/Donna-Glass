@@ -19,6 +19,7 @@ function revealCards() {
 window.addEventListener("scroll", revealCards);
 window.addEventListener("load", revealCards);
 
+
 // ===== Back To Top =====
 
 const topBtn = document.getElementById("topBtn");
@@ -41,6 +42,7 @@ topBtn.addEventListener("click", () => {
     });
 
 });
+
 
 // ===== Lightbox =====
 
@@ -71,6 +73,7 @@ lightbox.addEventListener("click", e => {
     }
 
 });
+
 
 // ===== Statistics Counter =====
 
@@ -103,135 +106,51 @@ counters.forEach(counter => {
     update();
 
 });
-window.addEventListener("load", function () {
+
+
+// ===== Loader =====
+
+window.addEventListener("load", () => {
 
     const loader = document.getElementById("loader");
 
     if(loader){
 
-        setTimeout(function(){
+        setTimeout(() => {
 
-            loader.style.opacity = "0";
+            loader.classList.add("loader-hide");
 
-            setTimeout(function(){
-
-                loader.style.display = "none";
-
+            setTimeout(() => {
+                loader.remove();
             },800);
 
-        },1500);
+        },2000);
 
     }
 
 });
-/* ===== Navbar Effect ===== */
+
+
+// ===== Navbar =====
 
 const navbar = document.getElementById("navbar");
 
-window.addEventListener("scroll", function(){
+if(navbar){
 
-    if(window.scrollY > 80){
-        navbar.classList.add("scrolled");
-    }else{
-        navbar.classList.remove("scrolled");
-    }
+    window.addEventListener("scroll", () => {
 
-});
-/* ===== Active Menu ===== */
-
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
-
-window.addEventListener("scroll", ()=>{
-
-    let current="";
-
-    sections.forEach(section=>{
-
-        const sectionTop=section.offsetTop-150;
-
-        if(scrollY>=sectionTop){
-            current=section.getAttribute("id");
+        if(window.scrollY > 80){
+            navbar.classList.add("scrolled");
+        }else{
+            navbar.classList.remove("scrolled");
         }
 
     });
 
-    navLinks.forEach(link=>{
-
-        link.classList.remove("active");
-
-        if(link.getAttribute("href")==="#"+current){
-            link.classList.add("active");
-        }
-
-    });
-
-});
-
-/* ===== Sections Animation ===== */
-
-const hiddenSections = document.querySelectorAll("section");
-
-const observer = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add("show-section");
-
-        }
-
-    });
-
-},{
-    threshold:0.2
-});
-
-hiddenSections.forEach(section=>{
-
-    section.classList.add("hidden");
-    observer.observe(section);
-
-});
-/* ===== Hide / Show Navbar ===== */
-
-let lastScroll = 0;
-
-window.addEventListener("scroll", () => {
-
-    const navbar = document.getElementById("navbar");
-    const currentScroll = window.pageYOffset;
-
-    if(currentScroll > lastScroll && currentScroll > 120){
-
-        navbar.style.transform = "translateY(-100%)";
-
-    }else{
-
-        navbar.style.transform = "translateY(0)";
-
-    }
-
-    lastScroll = currentScroll;
-
-});
-/* Navbar Scroll */
-
-const navbar = document.getElementById("navbar");
-
-window.addEventListener("scroll", () => {
-
-    if(window.scrollY > 80){
-        navbar.classList.add("scrolled");
-    }else{
-        navbar.classList.remove("scrolled");
-    }
-
-});
+}
 
 
-/* Active Menu */
+// ===== Active Menu =====
 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
@@ -244,7 +163,7 @@ window.addEventListener("scroll", () => {
 
         const sectionTop = section.offsetTop - 120;
 
-        if(scrollY >= sectionTop){
+        if(window.scrollY >= sectionTop){
             current = section.getAttribute("id");
         }
 
@@ -259,5 +178,56 @@ window.addEventListener("scroll", () => {
         }
 
     });
+
+});
+
+
+// ===== Sections Animation =====
+
+const hiddenSections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+            entry.target.classList.add("show-section");
+        }
+
+    });
+
+},{
+    threshold:0.2
+});
+
+hiddenSections.forEach(section=>{
+
+    section.classList.add("hidden");
+    observer.observe(section);
+
+});
+
+
+// ===== Hide / Show Navbar =====
+
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+
+    if(!navbar) return;
+
+    const currentScroll = window.pageYOffset;
+
+    if(currentScroll > lastScroll && currentScroll > 120){
+
+        navbar.style.transform = "translateY(-100%)";
+
+    }else{
+
+        navbar.style.transform = "translateY(0)";
+
+    }
+
+    lastScroll = currentScroll;
 
 });
