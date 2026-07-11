@@ -497,10 +497,22 @@ form button:hover{
     color:#003b8e;
 }
 .contact-info{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    margin-top:30px;
+    font-size:18px;
+    text-align:left;
+}
+
+.contact-info p{
+    margin:15px 0;
+}
+
+.contact-info a{
+    color:#333;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.contact-info a:hover{
+    color:#003b8e;
 }
 
 .location{
