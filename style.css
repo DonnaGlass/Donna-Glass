@@ -740,3 +740,14 @@ footer{
     opacity:0;
     visibility:hidden;
 }
+/* ===== Navbar Scroll Effect ===== */
+
+#navbar{
+    transition:.4s;
+}
+
+#navbar.scrolled{
+    background:#003b8e;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    padding:12px 18px;
+}
