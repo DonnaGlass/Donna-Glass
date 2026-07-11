@@ -103,3 +103,12 @@ counters.forEach(counter => {
     update();
 
 });
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+        document.getElementById("loader").classList.add("loader-hide");
+
+    }, 2000);
+
+});
