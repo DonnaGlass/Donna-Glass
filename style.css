@@ -863,3 +863,19 @@ section h2::after{
     border-radius:20px;
 
 }
+/* ===== Section Animation ===== */
+
+.hidden{
+
+    opacity:0;
+    transform:translateY(80px);
+    transition:all 1s ease;
+
+}
+
+.show-section{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
