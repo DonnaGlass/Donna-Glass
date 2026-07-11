@@ -879,3 +879,11 @@ section h2::after{
     transform:translateY(0);
 
 }
+#navbar{
+
+    transition:
+    transform .4s ease,
+    background .4s ease,
+    box-shadow .4s ease;
+
+}
