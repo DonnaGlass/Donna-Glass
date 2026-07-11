@@ -549,3 +549,21 @@ form button:hover{
     background:#4285F4;
     bottom:240px;
 }
+.whatsapp{
+    width:55px;
+    height:55px;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    border-radius:50%;
+}
+
+.email{
+    bottom:170px;
+}
+
+.location{
+    bottom:240px;
+}
