@@ -808,3 +808,58 @@ nav a.active::after{
 .footer-content p{
     color:#ddd;
 }
+/* ===== Floating Animation ===== */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.whatsapp,
+.email,
+.location{
+
+    animation:float 2.5s ease-in-out infinite;
+
+}
+.gallery img{
+
+    filter:brightness(95%);
+    transition:.5s;
+
+}
+
+.gallery img:hover{
+
+    filter:brightness(110%);
+    transform:scale(1.06);
+
+}
+section h2{
+
+    position:relative;
+
+}
+
+section h2::after{
+
+    content:"";
+    width:80px;
+    height:4px;
+    background:#39b6ff;
+    display:block;
+    margin:15px auto 0;
+    border-radius:20px;
+
+}
