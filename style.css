@@ -38,9 +38,27 @@ header{
     padding:10px;
     border-radius:15px;
     box-shadow:0 8px 20px rgba(0,0,0,.25);
-
     opacity:0;
-    animation:logoIntro 2s ease forwards;
+    animation:logoIntro 1.2s ease-out forwards;
+}
+
+@keyframes logoIntro{
+
+    0%{
+        opacity:0;
+        transform:scale(.2);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.2);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+
 }
 
 header h1{
@@ -105,42 +123,79 @@ nav a:hover::after{
 
 .hero{
     background:
-    linear-gradient(rgba(0,59,142,.75),rgba(0,59,142,.75)),
+    linear-gradient(rgba(0,59,142,.65),rgba(0,59,142,.65)),
     url("images/hero.jpg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-    color:#fff;
+    background-attachment:fixed;
+
+    min-height:90vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
     text-align:center;
-    padding:120px 20px;
+    color:#fff;
+    padding:20px;
 }
 
 .hero h2{
-    font-size:52px;
+    font-size:60px;
     margin-bottom:20px;
+    text-shadow:0 5px 15px rgba(0,0,0,.4);
+    animation:fadeInDown 1.2s ease;
 }
 
 .hero p{
-    max-width:900px;
-    margin:auto;
+    max-width:850px;
     font-size:22px;
+    line-height:1.8;
+    text-shadow:0 2px 8px rgba(0,0,0,.4);
+    animation:fadeInUp 1.5s ease;
 }
 
 .btn{
     display:inline-block;
     margin-top:35px;
-    padding:15px 40px;
+    padding:16px 45px;
     background:#fff;
     color:#003b8e;
     text-decoration:none;
-    border-radius:8px;
+    border-radius:50px;
     font-weight:bold;
-    transition:.3s;
+    transition:.4s;
+    animation:fadeInUp 1.8s ease;
 }
 
 .btn:hover{
-    background:#e6e6e6;
-    transform:translateY(-3px);
+    background:#f2f2f2;
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+@keyframes fadeInDown{
+    from{
+        opacity:0;
+        transform:translateY(-50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeInUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 /* =========================
@@ -157,6 +212,7 @@ section h2{
     font-size:36px;
     margin-bottom:40px;
 }
+
 /* =========================
    CARDS
 ========================= */
@@ -201,7 +257,6 @@ section h2{
     color:#555;
     line-height:1.7;
 }
-
 /* =========================
    ABOUT
 ========================= */
@@ -272,11 +327,23 @@ section h2{
 }
 
 /* =========================
-   WHY US
+   MACHINES
+========================= */
+
+#machines{
+    background:#fff;
+}
+
+/* =========================
+   WHY DONNA GLASS
 ========================= */
 
 #why{
     background:#f8f9fc;
+}
+
+#why .card{
+    border-top:5px solid #003b8e;
 }
 
 /* =========================
@@ -321,60 +388,9 @@ section h2{
     margin:20px auto;
     color:#f2f2f2;
 }
-#technology{
-    background:#f8f9fc;
-}
-
-#technology .card{
-    border-top:5px solid #0b6ef3;
-}
-
-#machines{
-    background:#fff;
-}
-
-#why{
-    background:#f8f9fc;
-}
-
-#why .card{
-    border-top:5px solid #003b8e;
-}
-
-#stats{
-    background:#003b8e;
-    color:#fff;
-    text-align:center;
-}
-
-#stats h2{
-    color:#fff;
-}
-
-#stats .card{
-    background:#fff;
-    color:#003b8e;
-}
-
-#stats .card h3{
-    font-size:40px;
-}
-
-#cta{
-    background:#003b8e;
-    color:#fff;
-    text-align:center;
-}
-
-#cta h2{
-    color:#fff;
-}
-
-#cta p{
-    max-width:800px;
-    margin:20px auto;
-    color:#f1f1f1;
-}
+/* =========================
+   CONTACT
+========================= */
 
 #contact{
     background:#f5f9ff;
@@ -395,7 +411,7 @@ section h2{
 }
 
 .contact-info p{
-    margin:15px 0;
+    margin:18px 0;
 }
 
 .contact-info a{
@@ -410,7 +426,7 @@ section h2{
 }
 
 form{
-    width:350px;
+    width:360px;
     display:flex;
     flex-direction:column;
     gap:15px;
@@ -423,10 +439,18 @@ form textarea{
     border:1px solid #ccc;
     border-radius:8px;
     font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+form input:focus,
+form textarea:focus{
+    border-color:#003b8e;
+    box-shadow:0 0 8px rgba(0,59,142,.2);
 }
 
 form textarea{
-    height:130px;
+    height:140px;
     resize:none;
 }
 
@@ -444,7 +468,29 @@ form button{
 form button:hover{
     background:#0056d2;
 }
-/* ===== Floating Buttons ===== */
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#003b8e;
+    color:#fff;
+    text-align:center;
+    padding:35px 20px;
+}
+
+.footer-content h3{
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.footer-content p{
+    margin:8px 0;
+   }
+/* =========================
+   FLOATING BUTTONS
+========================= */
 
 .float-btn{
     position:fixed;
@@ -500,7 +546,9 @@ form button:hover{
     transform:scale(1.1);
 }
 
-/* ===== Back To Top ===== */
+/* =========================
+   BACK TO TOP
+========================= */
 
 #topBtn{
     position:fixed;
@@ -523,12 +571,56 @@ form button:hover{
     background:#0056d2;
 }
 
-/* ===== Responsive ===== */
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:12px;
+}
+
+#close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:#fff;
+    font-size:42px;
+    cursor:pointer;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:768px){
 
     header h1{
         font-size:32px;
+    }
+
+    header p{
+        font-size:18px;
+    }
+
+    .logo img{
+        width:130px;
+    }
+
+    .hero{
+        min-height:70vh;
+        background-attachment:scroll;
     }
 
     .hero h2{
@@ -548,6 +640,14 @@ form button:hover{
         font-size:15px;
     }
 
+    section{
+        padding:60px 15px;
+    }
+
+    section h2{
+        font-size:30px;
+    }
+
     .cards{
         flex-direction:column;
         align-items:center;
@@ -563,6 +663,11 @@ form button:hover{
 
     .contact-box{
         flex-direction:column;
+        align-items:center;
+    }
+
+    .contact-info{
+        text-align:center;
     }
 
     form{
@@ -585,22 +690,4 @@ form button:hover{
     #topBtn{
         bottom:20px;
     }
-}
-@keyframes logoIntro{
-
-    0%{
-        opacity:0;
-        transform:scale(0) translateY(-100px);
-    }
-
-    50%{
-        opacity:1;
-        transform:scale(1.3) translateY(0);
-    }
-
-    100%{
-        opacity:1;
-        transform:scale(1);
-    }
-
-}
+   }
