@@ -481,13 +481,6 @@ form button:hover{
     border-radius:15px;
     margin-bottom:15px;
 }
-.logo img{
-    width:160px;
-    background:white;
-    padding:10px;
-    border-radius:15px;
-    margin-bottom:15px;
-}
 .contact-info i{
     color:#003b8e;
     font-size:22px;
@@ -508,32 +501,6 @@ form button:hover{
     justify-content:center;
     gap:20px;
     margin-top:30px;
-}
-
-.contact-icon{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    color:white;
-    font-size:28px;
-    transition:0.3s;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
-}
-
-.contact-icon:hover{
-    transform:scale(1.1);
-}
-
-.email{
-    background:#EA4335; /* Rouge Gmail */
-}
-
-.whats{
-    background:#25D366; /* Vert WhatsApp */
 }
 
 .location{
