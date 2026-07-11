@@ -792,3 +792,19 @@ nav a.active{
 nav a.active::after{
     width:100%;
 }
+.footer-line{
+    width:120px;
+    height:3px;
+    background:#39b6ff;
+    margin:18px auto;
+    border-radius:10px;
+}
+
+.footer-content h3{
+    font-size:30px;
+    letter-spacing:3px;
+}
+
+.footer-content p{
+    color:#ddd;
+}
