@@ -1,4 +1,4 @@
-/* =========================
+6/* =========================
    RESET
 ========================= */
 
@@ -554,26 +554,42 @@ footer{
     left:50%;
     bottom:25px;
     transform:translateX(-50%);
-    width:60px;
-    height:60px;
+    width:65px;
+    height:65px;
     border:none;
     border-radius:50%;
-    background:rgba(0,59,142,.85);
+    background:linear-gradient(135deg,#0b6ef3,#003b8e);
     color:#fff;
-    font-size:28px;
-    cursor:pointer;
+    font-size:30px;
     display:none;
     justify-content:center;
     align-items:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.30);
-    transition:all .35s ease;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    transition:.4s;
     z-index:9999;
+    animation:topFloat 2s ease-in-out infinite;
 }
 
 #topBtn:hover{
-    background:#0b6ef3;
-    transform:translateX(-50%) translateY(-8px) scale(1.1);
+    transform:translateX(-50%) translateY(-8px) scale(1.15);
+    box-shadow:0 15px 35px rgba(0,0,0,.45);
 }
+
+@keyframes topFloat{
+
+    0%{
+        transform:translateX(-50%) translateY(0);
+    }
+
+    50%{
+        transform:translateX(-50%) translateY(-8px);
+    }
+
+    100%{
+        transform:translateX(-50%) translateY(0);
+    }
+
 }
 
 /* =========================
