@@ -497,7 +497,7 @@
 
 <section id="contact">
 
-    <h2>Contact</h2>
+    <h2>Demande de devis</h2>
 
     <div class="contact-box">
 
@@ -528,19 +528,28 @@
 
         <form action="https://formsubmit.co/donnaglass82@gmail.com" method="POST">
 
-            <input type="text" name="Nom" placeholder="Votre nom" required>
+    <input type="text" name="Nom" placeholder="Nom complet" required>
 
-            <input type="email" name="Email" placeholder="Votre email" required>
+    <input type="text" name="Société" placeholder="Entreprise (optionnel)">
 
-            <textarea name="Message" placeholder="Votre message" required></textarea>
+    <input type="tel" name="Téléphone" placeholder="Téléphone" required>
 
-            <input type="hidden" name="_captcha" value="false">
+    <input type="email" name="Email" placeholder="Email" required>
 
-            <input type="hidden" name="_subject" value="Nouveau message - Donna Glass">
+    <input type="text" name="Produit" placeholder="Type de verre demandé" required>
 
-            <button type="submit">Envoyer</button>
+    <input type="text" name="Dimensions" placeholder="Dimensions (ex: 1200 × 800 mm)">
 
-        </form>
+    <input type="number" name="Quantité" placeholder="Quantité" required>
+
+    <textarea name="Message" placeholder="Décrivez votre demande..." required></textarea>
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nouvelle demande de devis - Donna Glass">
+
+    <button type="submit">Demander un devis</button>
+
+</form>
 
     </div>
 
