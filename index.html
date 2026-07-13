@@ -3,109 +3,125 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <meta name="description"
-        content="Donna Glass - Spécialiste en transformation du verre pour le bâtiment, l'automobile et l'électroménager.">
+<!-- SEO -->
+<meta name="description"
+content="Donna Glass - Spécialiste en transformation du verre pour le bâtiment, l'automobile et l'électroménager.">
 
-    <meta name="keywords"
-        content="Donna Glass, verre, glass, bâtiment, automobile, trempé, Algérie">
+<meta name="keywords"
+content="Donna Glass, verre, glass, bâtiment, automobile, trempé, Algérie">
 
-    <meta name="author" content="Donna Glass">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#003b8e">
+<meta name="author" content="Donna Glass">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#003b8e">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Donna Glass">
-    <meta property="og:description"
-        content="Solutions professionnelles de transformation du verre.">
-    <meta property="og:type" content="website">
-    <meta property="og:image"
-        content="images/IMG_20260506_122759_700.jpg">
+<!-- Open Graph -->
+<meta property="og:title" content="Donna Glass">
+<meta property="og:description"
+content="Solutions professionnelles de transformation du verre.">
+<meta property="og:type" content="website">
+<meta property="og:image"
+content="images/IMG_20260506_122759_700.jpg">
 
-    <title>Donna Glass | Transformation Professionnelle du Verre</title>
+<title>Donna Glass | Professional Glass Solutions</title>
 
-    <!-- Favicon -->
-    <link rel="icon"
-        type="image/jpeg"
-        href="images/IMG_20260506_122759_700.jpg">
+<!-- Favicon -->
+<link rel="icon"
+type="image/jpeg"
+href="images/IMG_20260506_122759_700.jpg">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- Loader -->
+<!-- ================= Loader ================= -->
 
 <div id="loader">
 
-    <img src="images/IMG_20260506_122759_700.jpg"
-         alt="Donna Glass Logo">
+<img src="images/IMG_20260506_122759_700.jpg"
+alt="Donna Glass Logo">
 
-    <h2>DONNA GLASS</h2>
+<h2>DONNA GLASS</h2>
 
 </div>
 
-<!-- Header -->
+<!-- ================= Header ================= -->
 
 <header>
 
-    <div class="logo">
+<div class="logo">
 
-        <img src="images/IMG_20260506_122759_700.jpg"
-             alt="Donna Glass Logo">
+<img src="images/IMG_20260506_122759_700.jpg"
+alt="Donna Glass Logo">
 
-    </div>
+</div>
 
-    <h1>DONNA GLASS</h1>
+<h1>DONNA GLASS</h1>
 
-    <p>LA PERFECTION</p>
+<p>LA PERFECTION</p>
 
 </header>
 
-<!-- Navigation -->
+<!-- ================= Navigation ================= -->
 
 <nav id="navbar">
 
-<a href="#home">الرئيسية</a>
+<a href="#home">Accueil</a>
 
-<a href="#about">من نحن</a>
+<a href="#about">À propos</a>
 
-<a href="#products">منتجاتنا</a>
+<a href="#products">Produits</a>
 
-<a href="#services">خدماتنا</a>
+<a href="#services">Services</a>
 
-<a href="#gallery">معرض الصور</a>
+<a href="#gallery">Galerie</a>
 
-<a href="#contact">طلب عرض سعر</a>
+<a href="#contact">Contact</a>
+
+<div class="lang-switch">
+
+<button onclick="setLanguage('fr')">FR</button>
+
+<button onclick="setLanguage('ar')">AR</button>
+
+<button onclick="setLanguage('en')">EN</button>
+
+</div>
 
 </nav>
 
-<!-- Hero -->
+<!-- ================= Hero ================= -->
 
 <section class="hero" id="home">
 
-<h2>مرحبًا بكم في دونا غلاس</h2>
+<h2 id="hero-title">
 
-<p>
+Bienvenue chez Donna Glass
 
-شركة رائدة في تصنيع وتحويل الزجاج المخصص
-لقطاعات البناء والسيارات والأجهزة الكهرومنزلية،
-باستخدام أحدث التقنيات الصناعية ومعايير الجودة العالمية.
+</h2>
+
+<p id="hero-text">
+
+Leader dans la transformation du verre
+pour le bâtiment, l'automobile
+et les appareils électroménagers.
 
 </p>
 
-<a href="#products" class="btn">
+<a href="#products"
+class="btn"
+id="hero-btn">
 
-اكتشف منتجاتنا
+Voir nos produits
 
 </a>
 
@@ -114,338 +130,360 @@
 
 <section id="about">
 
-    <h2>À propos de nous</h2>
+<h2 id="about-title">À propos de nous</h2>
 
-    <p style="text-align:center;max-width:900px;margin:auto;">
+<p id="about-text" style="text-align:center;max-width:950px;margin:auto;line-height:2;">
 
-        Donna Glass est spécialisée dans la transformation
-        du verre pour le bâtiment, l'automobile
-        et les appareils électroménagers.
+Donna Glass est spécialisée dans la transformation du verre
+pour le bâtiment, l'automobile et les appareils électroménagers.
 
-        Grâce à des technologies modernes et une équipe
-        qualifiée, nous proposons des produits
-        de haute qualité répondant aux normes
-        internationales.
+Grâce à des technologies modernes, des équipements de pointe
+et une équipe hautement qualifiée,
+nous proposons des produits de haute qualité
+conformes aux normes internationales.
 
-    </p>
+Notre objectif est d'offrir des solutions innovantes,
+fiables et durables répondant aux besoins de nos clients.
+
+</p>
 
 </section>
+
 
 <!-- ================= PRODUCTS ================= -->
 
 <section id="products">
 
-    <h2>Nos Produits</h2>
+<h2 id="products-title">Nos Produits</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
+<div class="card">
 
-            <h3>🏢 Verre Bâtiment</h3>
+<h3 id="product1-title">🏢 Verre Bâtiment</h3>
 
-            <p>
-                Verre destiné aux façades,
-                fenêtres, portes et projets
-                architecturaux.
-            </p>
+<p id="product1-text">
 
-        </div>
+Verre destiné aux façades,
+portes, fenêtres et projets architecturaux.
 
-        <div class="card">
+</p>
 
-            <h3>🚗 Verre Automobile</h3>
+</div>
 
-            <p>
-                Verre trempé et feuilleté
-                répondant aux exigences
-                de sécurité.
-            </p>
+<div class="card">
 
-        </div>
+<h3 id="product2-title">🚗 Verre Automobile</h3>
 
-        <div class="card">
+<p id="product2-text">
 
-            <h3>🏠 Verre Électroménager</h3>
+Verre trempé et feuilleté
+répondant aux normes internationales
+de sécurité.
 
-            <p>
-                Verre utilisé pour les fours,
-                réfrigérateurs et appareils
-                électroménagers.
-            </p>
+</p>
 
-        </div>
+</div>
 
-    </div>
+<div class="card">
+
+<h3 id="product3-title">🏠 Verre Électroménager</h3>
+
+<p id="product3-text">
+
+Verre haute résistance
+pour fours, réfrigérateurs
+et appareils électroménagers.
+
+</p>
+
+</div>
+
+</div>
 
 </section>
+
 
 <!-- ================= SERVICES ================= -->
 
 <section id="services">
 
-    <h2>Nos Services</h2>
+<h2 id="services-title">Nos Services</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
+<div class="card">
 
-            <h3>✂️ Découpe</h3>
+<h3 id="service1-title">✂️ Découpe</h3>
 
-            <p>
-                Découpe du verre avec une
-                précision maximale.
-            </p>
+<p id="service1-text">
 
-        </div>
+Découpe de haute précision
+adaptée à tous les types de verre.
 
-        <div class="card">
+</p>
 
-            <h3>⚙️ Perçage & Usinage</h3>
+</div>
 
-            <p>
-                Perçage, façonnage
-                et finition professionnelle.
-            </p>
+<div class="card">
 
-        </div>
+<h3 id="service2-title">⚙️ Usinage</h3>
 
-        <div class="card">
+<p id="service2-text">
 
-            <h3>🔥 Trempe</h3>
+Perçage, façonnage,
+polissage et finition professionnelle.
 
-            <p>
-                Traitement thermique
-                pour renforcer
-                la résistance du verre.
-            </p>
+</p>
 
-        </div>
+</div>
 
-        <div class="card">
+<div class="card">
 
-            <h3>✅ Contrôle Qualité</h3>
+<h3 id="service3-title">🔥 Trempe</h3>
 
-            <p>
-                Inspection complète
-                avant la livraison
-                au client.
-            </p>
+<p id="service3-text">
 
-        </div>
+Traitement thermique
+garantissant une résistance
+et une sécurité maximales.
 
-    </div>
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 id="service4-title">✅ Contrôle Qualité</h3>
+
+<p id="service4-text">
+
+Inspection complète
+avant l'expédition
+de chaque produit.
+
+</p>
+
+</div>
+
+</div>
 
 </section>
-
 <!-- ================= GALLERY ================= -->
 
 <section id="gallery">
 
-    <h2>Notre Galerie</h2>
+<h2 id="gallery-title">Notre Galerie</h2>
 
-    <div class="gallery">
+<div class="gallery">
 
-        <img src="images/gallery1.jpg"
-             alt="Usine Donna Glass"
-             loading="lazy">
+<img src="images/gallery1.jpg"
+alt="Donna Glass"
+loading="lazy">
 
-        <img src="images/gallery2.jpg"
-             alt="Machines Donna Glass"
-             loading="lazy">
+<img src="images/gallery2.jpg"
+alt="Donna Glass"
+loading="lazy">
 
-        <img src="images/gallery3.jpg"
-             alt="Transformation du verre"
-             loading="lazy">
+<img src="images/gallery3.jpg"
+alt="Donna Glass"
+loading="lazy">
 
-        <img src="images/gallery4.jpg"
-             alt="Produits Donna Glass"
-             loading="lazy">
+<img src="images/gallery4.jpg"
+alt="Donna Glass"
+loading="lazy">
 
-    </div>
+</div>
 
 </section>
+
+
 <!-- ================= PROCESS ================= -->
 
 <section id="process">
 
-    <h2>Notre Processus de Transformation</h2>
+<h2 id="process-title">Notre Processus</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
+<div class="card">
 
-            <h3>1️⃣ Réception du verre</h3>
+<h3 id="step1-title">1️⃣ Réception du verre</h3>
 
-            <p>
-                Réception et contrôle des plaques
-                de verre avant la production.
-            </p>
+<p id="step1-text">
 
-        </div>
+Contrôle de qualité des plaques
+de verre avant la production.
 
-        <div class="card">
+</p>
 
-            <h3>2️⃣ Découpe</h3>
+</div>
 
-            <p>
-                Découpe de haute précision
-                réalisée par des machines CNC.
-            </p>
+<div class="card">
 
-        </div>
+<h3 id="step2-title">2️⃣ Découpe CNC</h3>
 
-        <div class="card">
+<p id="step2-text">
 
-            <h3>3️⃣ Usinage & Trempe</h3>
+Découpe automatique
+avec une précision élevée.
 
-            <p>
-                Perçage, polissage, façonnage
-                puis traitement thermique.
-            </p>
+</p>
 
-        </div>
+</div>
 
-        <div class="card">
+<div class="card">
 
-            <h3>4️⃣ Contrôle Final</h3>
+<h3 id="step3-title">3️⃣ Usinage & Trempe</h3>
 
-            <p>
-                Inspection qualité et
-                préparation pour la livraison.
-            </p>
+<p id="step3-text">
 
-        </div>
+Perçage, polissage,
+façonnage puis traitement thermique.
 
-    </div>
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 id="step4-title">4️⃣ Contrôle Final</h3>
+
+<p id="step4-text">
+
+Inspection finale,
+emballage et préparation
+à la livraison.
+
+</p>
+
+</div>
+
+</div>
 
 </section>
+
 
 <!-- ================= TECHNOLOGY ================= -->
 
 <section id="technology">
 
-    <h2>Nos Technologies</h2>
+<h2 id="technology-title">Nos Technologies</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
+<div class="card">
 
-            <h3>✂️ Découpe CNC</h3>
+<h3 id="tech1-title">✂️ Découpe CNC</h3>
 
-            <p>
-                Machines de découpe
-                automatiques haute précision.
-            </p>
+<p id="tech1-text">
 
-        </div>
+Machines de découpe
+automatiques de haute précision.
 
-        <div class="card">
+</p>
 
-            <h3>⚙️ Machines Modernes</h3>
+</div>
 
-            <p>
-                Centres d'usinage modernes
-                pour tous les types de verre.
-            </p>
+<div class="card">
 
-        </div>
+<h3 id="tech2-title">⚙️ Centres d'usinage</h3>
 
-        <div class="card">
+<p id="tech2-text">
 
-            <h3>🔥 Four de Trempe</h3>
+Technologies modernes
+pour le façonnage du verre.
 
-            <p>
-                Four industriel garantissant
-                un verre solide et sécurisé.
-            </p>
+</p>
 
-        </div>
+</div>
 
-    </div>
+<div class="card">
+
+<h3 id="tech3-title">🔥 Four de trempe</h3>
+
+<p id="tech3-text">
+
+Traitement thermique
+pour un verre plus résistant.
+
+</p>
+
+</div>
+
+</div>
 
 </section>
+
 
 <!-- ================= MACHINES ================= -->
 
 <section id="machines">
 
-    <h2>Nos Machines</h2>
+<h2 id="machines-title">Nos Machines</h2>
 
-    <div class="gallery">
+<div class="gallery">
 
-        <img src="images/machine1.jpg"
-             alt="Machine de découpe"
-             loading="lazy">
+<img src="images/machine1.jpg"
+alt="Machine 1"
+loading="lazy">
 
-        <img src="images/machine2.jpg"
-             alt="Machine d'usinage"
-             loading="lazy">
+<img src="images/machine2.jpg"
+alt="Machine 2"
+loading="lazy">
 
-        <img src="images/machine3.jpg"
-             alt="Four de trempe"
-             loading="lazy">
+<img src="images/machine3.jpg"
+alt="Machine 3"
+loading="lazy">
 
-        <img src="images/machine4.jpg"
-             alt="Contrôle qualité"
-             loading="lazy">
+<img src="images/machine4.jpg"
+alt="Machine 4"
+loading="lazy">
 
-    </div>
+</div>
 
 </section>
-
-<!-- ================= WHY US ================= -->
+<!-- ================= WHY DONNA GLASS ================= -->
 
 <section id="why">
 
-    <h2>Pourquoi choisir Donna Glass ?</h2>
+<h2 id="why-title">Pourquoi choisir Donna Glass ?</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
+<div class="card">
+<h3 id="why1-title">⭐ Qualité Premium</h3>
+<p id="why1-text">
+Des produits conformes aux normes internationales
+avec une finition irréprochable.
+</p>
+</div>
 
-            <h3>⭐ Qualité Premium</h3>
+<div class="card">
+<h3 id="why2-title">⚡ Haute Technologie</h3>
+<p id="why2-text">
+Des équipements modernes
+pour une production de haute précision.
+</p>
+</div>
 
-            <p>
-                Produits conformes
-                aux normes internationales.
-            </p>
+<div class="card">
+<h3 id="why3-title">👨‍🔧 Équipe Professionnelle</h3>
+<p id="why3-text">
+Une équipe qualifiée
+au service de vos projets.
+</p>
+</div>
 
-        </div>
+<div class="card">
+<h3 id="why4-title">🚚 Livraison Rapide</h3>
+<p id="why4-text">
+Respect des délais
+et satisfaction du client.
+</p>
+</div>
 
-        <div class="card">
-
-            <h3>⚡ Haute Technologie</h3>
-
-            <p>
-                Équipements modernes
-                pour une qualité irréprochable.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>🤝 Équipe Professionnelle</h3>
-
-            <p>
-                Une équipe qualifiée
-                à votre service.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>🚚 Livraison Rapide</h3>
-
-            <p>
-                Délais rapides
-                et service fiable.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
@@ -453,31 +491,31 @@
 
 <section id="stats">
 
-    <h2>Donna Glass en chiffres</h2>
+<h2 id="stats-title">Donna Glass en chiffres</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
-            <h3 class="counter" data-target="15">0</h3>
-            <p>Années d'expérience</p>
-        </div>
+<div class="card">
+<h3 class="counter" data-target="15">0</h3>
+<p id="stat1">Années d'expérience</p>
+</div>
 
-        <div class="card">
-            <h3 class="counter" data-target="500">0</h3>
-            <p>Projets réalisés</p>
-        </div>
+<div class="card">
+<h3 class="counter" data-target="500">0</h3>
+<p id="stat2">Projets réalisés</p>
+</div>
 
-        <div class="card">
-            <h3 class="counter" data-target="120">0</h3>
-            <p>Clients satisfaits</p>
-        </div>
+<div class="card">
+<h3 class="counter" data-target="120">0</h3>
+<p id="stat3">Clients satisfaits</p>
+</div>
 
-        <div class="card">
-            <h3>24/7</h3>
-            <p>Support Technique</p>
-        </div>
+<div class="card">
+<h3>24/7</h3>
+<p id="stat4">Support Technique</p>
+</div>
 
-    </div>
+</div>
 
 </section>
 
@@ -485,92 +523,100 @@
 
 <section id="cta">
 
-    <h2>Need High-Quality Glass Solutions?</h2>
+<h2 id="cta-title">
 
-    <p>
+Besoin de solutions professionnelles en verre ?
 
-        Contact Donna Glass today
-        for professional glass
-        transformation services.
+</h2>
 
-    </p>
+<p id="cta-text">
 
-    <a href="#contact" class="btn">
+Notre équipe vous accompagne
+dans tous vos projets de transformation du verre.
 
-        Contact Us
+</p>
 
-    </a>
+<a href="#contact" class="btn" id="cta-btn">
+
+Demander un devis
+
+</a>
 
 </section>
-    <!-- ================= CONTACT ================= -->
+
+<!-- ================= CONTACT ================= -->
 
 <section id="contact">
 
-    <h2>Demande de devis</h2>
+<h2 id="contact-title">Demande de devis</h2>
 
-    <div class="contact-box">
+<div class="contact-box">
 
-        <div class="contact-info">
+<div class="contact-info">
 
-            <p>
-                📧
-                <a href="mailto:donnaglass82@gmail.com">
-                    donnaglass82@gmail.com
-                </a>
-            </p>
+<p>
+📧
+<a href="mailto:donnaglass82@gmail.com">
+donnaglass82@gmail.com
+</a>
+</p>
 
-            <p>
-                📞
-                <a href="https://wa.me/213XXXXXXXXX" target="_blank">
-                    +213 XX XX XX XX
-                </a>
-            </p>
+<p>
+📞
+<a href="https://wa.me/213XXXXXXXXX" target="_blank">
++213 XX XX XX XX
+</a>
+</p>
 
-            <p>
-                📍
-                <a href="https://maps.app.goo.gl/n1p9AocYxifF7uD4A?g_st=ac" target="_blank">
-                    Donna Glass - Google Maps
-                </a>
-            </p>
+<p>
+📍
+<a href="https://maps.app.goo.gl/n1p9AocYxifF7uD4A?g_st=ac" target="_blank">
+Donna Glass - Google Maps
+</a>
+</p>
 
-        </div>
+</div>
 
-        <form action="https://formsubmit.co/donnaglass82@gmail.com" method="POST">
+<form action="https://formsubmit.co/donnaglass82@gmail.com" method="POST">
 
-    <input type="text" name="Nom" placeholder="Nom complet" required>
+<input type="text" name="Nom" placeholder="Nom complet" required>
 
-    <input type="text" name="Société" placeholder="Entreprise (optionnel)">
+<input type="text" name="Société" placeholder="Entreprise (optionnel)">
 
-    <input type="tel" name="Téléphone" placeholder="Téléphone" required>
+<input type="tel" name="Téléphone" placeholder="Téléphone" required>
 
-    <input type="email" name="Email" placeholder="Email" required>
+<input type="email" name="Email" placeholder="Email" required>
 
-    <input type="text" name="Produit" placeholder="Type de verre demandé" required>
+<input type="text" name="Produit" placeholder="Type de verre demandé" required>
 
-    <input type="text" name="Dimensions" placeholder="Dimensions (ex: 1200 × 800 mm)">
+<input type="text" name="Dimensions" placeholder="Dimensions">
 
-    <input type="number" name="Quantité" placeholder="Quantité" required>
+<input type="number" name="Quantité" placeholder="Quantité" required>
 
-    <textarea name="Message" placeholder="Décrivez votre demande..." required></textarea>
+<textarea name="Message" placeholder="Décrivez votre demande..." required></textarea>
 
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="Nouvelle demande de devis - Donna Glass">
+<input type="hidden" name="_captcha" value="false">
 
-    <button type="submit">Demander un devis</button>
+<input type="hidden" name="_subject" value="Nouvelle demande de devis - Donna Glass">
+
+<button type="submit" id="send-btn">
+
+Demander un devis
+
+</button>
 
 </form>
 
-    </div>
+</div>
 
 </section>
-
 <!-- ================= FLOATING BUTTONS ================= -->
 
 <a href="mailto:donnaglass82@gmail.com"
 class="float-btn email"
 title="Email">
 
-    <i class="fa-solid fa-envelope"></i>
+<i class="fa-solid fa-envelope"></i>
 
 </a>
 
@@ -579,7 +625,7 @@ class="float-btn location"
 target="_blank"
 title="Location">
 
-    <i class="fa-solid fa-location-dot"></i>
+<i class="fa-solid fa-location-dot"></i>
 
 </a>
 
@@ -588,7 +634,7 @@ class="whatsapp"
 target="_blank"
 title="WhatsApp">
 
-    <i class="fa-brands fa-whatsapp"></i>
+<i class="fa-brands fa-whatsapp"></i>
 
 </a>
 
@@ -596,37 +642,44 @@ title="WhatsApp">
 
 <footer>
 
-    <div class="footer-content">
+<div class="footer-content">
 
-        <h3>Donna Glass</h3>
+<h3>Donna Glass</h3>
 
-        <div class="footer-line"></div>
+<div class="footer-line"></div>
 
-        <p>
-            Professional Glass Transformation Solutions
-        </p>
+<p id="footer-text">
 
-        <p>
-            &copy; 2026 Donna Glass.
-            All Rights Reserved.
-        </p>
+Professional Glass Transformation Solutions
 
-    </div>
+</p>
+
+<p>
+
+&copy; 2026 Donna Glass.
+All Rights Reserved.
+
+</p>
+
+</div>
 
 </footer>
 
 <!-- ================= BACK TO TOP ================= -->
 
 <button id="topBtn">
+
 <i class="fa-solid fa-chevron-up"></i>
+
 </button>
+
 <!-- ================= LIGHTBOX ================= -->
 
 <div id="lightbox" class="lightbox">
 
-    <span id="close">&times;</span>
+<span id="close">&times;</span>
 
-    <img id="lightbox-img" src="" alt="Gallery Image">
+<img id="lightbox-img" src="" alt="Gallery Image">
 
 </div>
 
@@ -635,5 +688,4 @@ title="WhatsApp">
 <script src="script.js"></script>
 
 </body>
-
 </html>
