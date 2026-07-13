@@ -1,145 +1,120 @@
-// =======================================
-// DONNA GLASS V2.0
-// =======================================
-
-// ===== Cards Animation =====
-
-const cards = document.querySelectorAll(".card");
-
-function revealCards() {
-
-    cards.forEach(card => {
-
-        const position = card.getBoundingClientRect().top;
-
-        if (position < window.innerHeight - 80) {
-            card.classList.add("show");
-        }
-
-    });
-
-}
-
-window.addEventListener("scroll", revealCards);
-window.addEventListener("load", revealCards);
+/*==================================================
+            DONNA GLASS V3.0
+        Professional JavaScript
+==================================================*/
 
 
-// ===== Loader =====
+/*========== LOADER ==========*/
 
-window.addEventListener("load", () => {
+window.addEventListener("load",()=>{
 
-    const loader = document.getElementById("loader");
+const loader=document.getElementById("loader");
 
-    if (!loader) return;
+setTimeout(()=>{
 
-    setTimeout(() => {
+loader.classList.add("loader-hide");
 
-        loader.classList.add("loader-hide");
+setTimeout(()=>{
 
-        setTimeout(() => {
+loader.remove();
 
-            loader.remove();
+},800);
 
-        }, 800);
-
-    }, 1500);
+},1500);
 
 });
 
 
-// ===== Navbar =====
+/*========== STICKY NAVBAR ==========*/
 
-const navbar = document.getElementById("navbar");
-
-if (navbar) {
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 80) {
-
-            navbar.classList.add("scrolled");
-
-        } else {
-
-            navbar.classList.remove("scrolled");
-
-        }
-
-    });
-
-}
-
-
-// ===== Hide Navbar =====
-
-let lastScroll = 0;
-
-window.addEventListener("scroll", () => {
-
-    if (!navbar) return;
-
-    const current = window.pageYOffset;
-
-    if (current > lastScroll && current > 150) {
-
-        navbar.style.transform = "translateY(-100%)";
-
-    } else {
-
-        navbar.style.transform = "translateY(0)";
-
-    }
-
-    lastScroll = current;
-
-});
-
-
-// ===== Active Menu =====
-
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("#navbar a");
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const top = section.offsetTop - 150;
-
-        if (window.scrollY >= top) {
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-});
-// =======================================
-// BACK TO TOP
-// =======================================
-
-const topBtn = document.getElementById("topBtn");
-
-if(topBtn){
+const navbar=document.getElementById("navbar");
 
 window.addEventListener("scroll",()=>{
 
-if(window.scrollY>300){
+if(window.scrollY>60){
+
+navbar.classList.add("scrolled");
+
+}else{
+
+navbar.classList.remove("scrolled");
+
+}
+
+});
+
+
+/*========== ACTIVE MENU ==========*/
+
+const sections=document.querySelectorAll("section");
+
+const navLinks=document.querySelectorAll(".nav-menu a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const top=section.offsetTop-140;
+
+const height=section.clientHeight;
+
+if(pageYOffset>=top){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+
+/*========== SCROLL ANIMATION ==========*/
+
+const cards=document.querySelectorAll(".card");
+
+function revealCards(){
+
+cards.forEach(card=>{
+
+const position=card.getBoundingClientRect().top;
+
+if(position<window.innerHeight-80){
+
+card.classList.add("show");
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll",revealCards);
+
+window.addEventListener("load",revealCards);
+
+
+/*========== BACK TO TOP ==========*/
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>400){
 
 topBtn.style.display="flex";
 
@@ -151,55 +126,80 @@ topBtn.style.display="none";
 
 });
 
-topBtn.addEventListener("click",()=>{
+topBtn.onclick=()=>{
 
 window.scrollTo({
 
 top:0,
+
 behavior:"smooth"
 
 });
 
-});
+};
+
+
+/*========== DARK MODE ==========*/
+
+const themeBtn=document.getElementById("theme-toggle");
+
+const body=document.body;
+
+if(localStorage.getItem("theme")==="dark"){
+
+body.classList.add("dark");
+
+themeBtn.innerHTML='<i class="fa-solid fa-sun"></i>';
 
 }
 
+themeBtn.onclick=()=>{
 
-// =======================================
-// LIGHTBOX
-// =======================================
+body.classList.toggle("dark");
+
+if(body.classList.contains("dark")){
+
+localStorage.setItem("theme","dark");
+
+themeBtn.innerHTML='<i class="fa-solid fa-sun"></i>';
+
+}else{
+
+localStorage.setItem("theme","light");
+
+themeBtn.innerHTML='<i class="fa-solid fa-moon"></i>';
+
+}
+
+};
+/*=========================================
+            LIGHTBOX
+=========================================*/
 
 const galleryImages=document.querySelectorAll(".gallery img");
-
 const lightbox=document.getElementById("lightbox");
-
 const lightboxImg=document.getElementById("lightbox-img");
-
-const close=document.getElementById("close");
-
-if(lightbox){
+const closeBtn=document.getElementById("close");
 
 galleryImages.forEach(img=>{
 
 img.addEventListener("click",()=>{
 
 lightbox.style.display="flex";
-
 lightboxImg.src=img.src;
-
 lightboxImg.alt=img.alt;
 
 });
 
 });
 
-close.addEventListener("click",()=>{
+closeBtn.onclick=()=>{
 
 lightbox.style.display="none";
 
-});
+}
 
-lightbox.addEventListener("click",(e)=>{
+lightbox.onclick=(e)=>{
 
 if(e.target===lightbox){
 
@@ -207,14 +207,12 @@ lightbox.style.display="none";
 
 }
 
-});
-
-}
+};
 
 
-// =======================================
-// COUNTER
-// =======================================
+/*=========================================
+              COUNTER
+=========================================*/
 
 const counters=document.querySelectorAll(".counter");
 
@@ -222,29 +220,29 @@ const counterObserver=new IntersectionObserver(entries=>{
 
 entries.forEach(entry=>{
 
-if(!entry.isIntersecting) return;
+if(!entry.isIntersecting)return;
 
 const counter=entry.target;
 
-const target=Number(counter.dataset.target);
+const target=+counter.dataset.target;
 
-let value=0;
+let count=0;
 
-const speed=Math.max(1,Math.ceil(target/100));
+const speed=Math.ceil(target/120);
 
 function update(){
 
-value+=speed;
+count+=speed;
 
-if(value<target){
+if(count<target){
 
-counter.textContent=value;
+counter.innerText=count;
 
 requestAnimationFrame(update);
 
 }else{
 
-counter.textContent=target+"+";
+counter.innerText=target+"+";
 
 }
 
@@ -256,9 +254,7 @@ counterObserver.unobserve(counter);
 
 });
 
-},{
-threshold:.5
-});
+},{threshold:.5});
 
 counters.forEach(counter=>{
 
@@ -267,13 +263,147 @@ counterObserver.observe(counter);
 });
 
 
-// =======================================
-// SECTION ANIMATION
-// =======================================
+/*=========================================
+           LANGUAGE SYSTEM
+=========================================*/
+
+const translations={
+
+fr:{
+
+heroTitle:"Bienvenue chez Donna Glass",
+
+heroText:"Leader dans la transformation professionnelle du verre pour le bâtiment, l'automobile et les appareils électroménagers.",
+
+heroBtn:"Demander un devis",
+
+navHome:"Accueil",
+
+navAbout:"À propos",
+
+navProducts:"Produits",
+
+navServices:"Services",
+
+navGallery:"Galerie",
+
+navContact:"Contact"
+
+},
+
+en:{
+
+heroTitle:"Welcome to Donna Glass",
+
+heroText:"Leader in professional glass processing for construction, automotive and home appliances.",
+
+heroBtn:"Request a Quote",
+
+navHome:"Home",
+
+navAbout:"About",
+
+navProducts:"Products",
+
+navServices:"Services",
+
+navGallery:"Gallery",
+
+navContact:"Contact"
+
+},
+
+ar:{
+
+heroTitle:"مرحبًا بكم في دونا غلاس",
+
+heroText:"الرائد في معالجة الزجاج للبناء والسيارات والأجهزة الكهرومنزلية.",
+
+heroBtn:"اطلب عرض سعر",
+
+navHome:"الرئيسية",
+
+navAbout:"من نحن",
+
+navProducts:"المنتجات",
+
+navServices:"الخدمات",
+
+navGallery:"المعرض",
+
+navContact:"اتصل بنا"
+
+}
+
+};
+
+
+function setLanguage(lang){
+
+document.documentElement.lang=lang;
+
+document.documentElement.dir=(lang==="ar")?"rtl":"ltr";
+
+localStorage.setItem("language",lang);
+
+const t=translations[lang];
+
+document.getElementById("hero-title").textContent=t.heroTitle;
+document.getElementById("hero-text").textContent=t.heroText;
+document.getElementById("hero-btn").textContent=t.heroBtn;
+
+document.getElementById("nav-home").textContent=t.navHome;
+document.getElementById("nav-about").textContent=t.navAbout;
+document.getElementById("nav-products").textContent=t.navProducts;
+document.getElementById("nav-services").textContent=t.navServices;
+document.getElementById("nav-gallery").textContent=t.navGallery;
+document.getElementById("nav-contact").textContent=t.navContact;
+
+}
+
+document.getElementById("fr").onclick=()=>setLanguage("fr");
+document.getElementById("en").onclick=()=>setLanguage("en");
+document.getElementById("ar").onclick=()=>setLanguage("ar");
+
+window.addEventListener("load",()=>{
+
+setLanguage(localStorage.getItem("language")||"fr");
+
+});
+/*=========================================
+        SMOOTH SCROLL
+=========================================*/
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const target=document.querySelector(this.getAttribute("href"));
+
+if(target){
+
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+});
+
+});
+
+
+/*=========================================
+        SECTION ANIMATION
+=========================================*/
 
 const hiddenSections=document.querySelectorAll("section");
 
-const observer=new IntersectionObserver(entries=>{
+const sectionObserver=new IntersectionObserver(entries=>{
 
 entries.forEach(entry=>{
 
@@ -286,166 +416,34 @@ entry.target.classList.add("show-section");
 });
 
 },{
-threshold:.15
+threshold:0.15
 });
 
 hiddenSections.forEach(section=>{
 
 section.classList.add("hidden");
 
-observer.observe(section);
-
-});
-// =======================================
-// LANGUAGE SYSTEM
-// =======================================
-
-const language = {
-
-fr:{
-
-heroTitle:"Bienvenue chez Donna Glass",
-heroText:"Leader dans la transformation du verre pour le bâtiment, l'automobile et l'électroménager.",
-heroBtn:"Voir nos produits",
-
-aboutTitle:"À propos de nous",
-
-productsTitle:"Nos Produits",
-
-servicesTitle:"Nos Services",
-
-galleryTitle:"Notre Galerie",
-
-contactTitle:"Demande de devis"
-
-},
-
-en:{
-
-heroTitle:"Welcome to Donna Glass",
-heroText:"Leader in glass processing for construction, automotive and home appliances.",
-heroBtn:"View Products",
-
-aboutTitle:"About Us",
-
-productsTitle:"Our Products",
-
-servicesTitle:"Our Services",
-
-galleryTitle:"Our Gallery",
-
-contactTitle:"Request a Quote"
-
-},
-
-ar:{
-
-heroTitle:"مرحبًا بكم في دونا غلاس",
-heroText:"الرائد في تحويل الزجاج للبناء والسيارات والأجهزة الكهرومنزلية.",
-heroBtn:"اكتشف منتجاتنا",
-
-aboutTitle:"من نحن",
-
-productsTitle:"منتجاتنا",
-
-servicesTitle:"خدماتنا",
-
-galleryTitle:"معرض الصور",
-
-contactTitle:"طلب عرض سعر"
-
-}
-
-};
-
-
-// =======================================
-// CHANGE LANGUAGE
-// =======================================
-
-function setLanguage(lang){
-
-const html=document.documentElement;
-
-if(lang==="ar"){
-
-html.lang="ar";
-html.dir="rtl";
-
-}else{
-
-html.lang=lang;
-html.dir="ltr";
-
-}
-
-localStorage.setItem("language",lang);
-
-const t=language[lang];
-
-const ids={
-
-"hero-title":t.heroTitle,
-"hero-text":t.heroText,
-"hero-btn":t.heroBtn,
-"about-title":t.aboutTitle,
-"products-title":t.productsTitle,
-"services-title":t.servicesTitle,
-"gallery-title":t.galleryTitle,
-"contact-title":t.contactTitle
-
-};
-
-Object.keys(ids).forEach(id=>{
-
-const el=document.getElementById(id);
-
-if(el){
-
-el.textContent=ids[id];
-
-}
+sectionObserver.observe(section);
 
 });
 
-}
 
+/*=========================================
+        CURRENT YEAR
+=========================================*/
 
-// =======================================
-// LANGUAGE BUTTONS
-// =======================================
+const year=document.getElementById("year");
 
-const frBtn=document.getElementById("fr");
-const enBtn=document.getElementById("en");
-const arBtn=document.getElementById("ar");
+if(year){
 
-if(frBtn){
-
-frBtn.onclick=()=>setLanguage("fr");
-
-}
-
-if(enBtn){
-
-enBtn.onclick=()=>setLanguage("en");
-
-}
-
-if(arBtn){
-
-arBtn.onclick=()=>setLanguage("ar");
+year.textContent=new Date().getFullYear();
 
 }
 
 
-// =======================================
-// LOAD SAVED LANGUAGE
-// =======================================
+/*=========================================
+        CONSOLE MESSAGE
+=========================================*/
 
-window.addEventListener("load",()=>{
-
-const saved=localStorage.getItem("language")||"fr";
-
-setLanguage(saved);
-
-});
+console.log("%cDONNA GLASS","color:#003b8e;font-size:28px;font-weight:bold;");
+console.log("%cProfessional Glass Processing Solutions","color:#39b6ff;font-size:14px;");
