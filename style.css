@@ -710,45 +710,6 @@ animation:floating 2.8s ease-in-out infinite;
                 RESPONSIVE
 ==================================================*/
 
-@media(max-width:768px){
-
-#navbar{
-display:flex;
-flex-direction:row;
-align-items:center;
-padding:12px 15px;
-overflow:hidden;
-}
-
-.nav-menu{
-display:flex;
-flex-wrap:nowrap;
-overflow-x:auto;
-white-space:nowrap;
-gap:15px;
-scrollbar-width:none;
-}
-
-.nav-menu::-webkit-scrollbar{
-display:none;
-}
-
-.nav-menu a{
-font-size:15px;
-padding:8px 12px;
-}
-
-}
-
-.hero h2{
-font-size:45px;
-}
-
-.hero p{
-font-size:20px;
-}
-
-}
 
 @media(max-width:768px){
 
